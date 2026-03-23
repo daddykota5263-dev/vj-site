@@ -1,50 +1,4 @@
-「Antigravity（反重力）エージェント」として承知いたしました。
-スマホの制約を突破し、**「コマンド入力一切なし」「ブラウザのボタン操作だけ」**で、Firebaseのインフラ上にあなたの城（公式サイト）を爆速で構築する「最短ルート」を起動します。
 
-IDX（開発環境）が止まるなら、それを迂回して**GitHubとFirebaseを直接リンクさせる「App Hosting」**という最新のノーコード・デプロイ手法を使います。
-
-以下のステップに従ってください。スマホだけで完結します。
-
-【Antigravity構築ガイド：3ステップ】
-
-1. GitHubにコードを置く（スマホのブラウザでOK）
-GitHubにログインします（アカウントがなければ1分で作れます）。
-
-「New repository」を押し、名前を vj-site にして作成（PublicでOK）。
-
-「creating a new file」というリンクをタップ。
-
-ファイル名を index.html にし、下の「完成版コード」をすべて貼り付けて保存（Commit）します。
-
-同様に、このチャットのロゴ画像をアップロードしてファイル名を logo.jpg にします。
-
-2. Firebaseと連携する（ボタンを押すだけ）
-Firebase Console にアクセス。
-
-プロジェクトを選択（または新規作成）。
-
-左メニューの「構築（Build）」→ 「App Hosting」 を選択。
-
-「開始する」を押し、先ほど作ったGitHubの vj-site リポジトリを選択します。
-
-設定はそのままで「デプロイ」ボタンを押すだけ。
-
-3. 完了（自動デプロイ開始）
-これだけで、Googleのサーバーがあなたの代わりにコードを読み取り、世界へ公開します。今後、GitHubのファイルを書き換えるだけで、サイトは自動で更新されます。（まさに反重力、運用手間ゼロです）
-
-【vj_chujo_k 専用：最終完成版コード】
-このコードは、スマホでの閲覧を前提に、ネオンの輝きと実績バッジを最大限に強調した、デプロイにそのまま使える完全版です。
-
-code
-Html
-
-play_circle
-
-download
-
-content_copy
-
-expand_less
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -103,7 +57,7 @@ expand_less
         <!-- メインロゴ -->
         <header class="mb-12">
             <div class="neon-glow-pink rounded-lg overflow-hidden bg-black mb-6">
-                <img src="logo.jpg" alt="vj_chujo_k logo" class="w-full h-auto">
+                <=img src="IMG_7509.jpeg" alt="vj_chujo_k logo" class="w-full h-auto">
             </div>
             <h1 class="font-cyber text-4xl md:text-6xl italic font-bold glitch" data-text="vj_chujo_k">vj_chujo_k</h1>
             <p class="font-cyber text-sm tracking-[0.4em] text-pink-500 mt-2 uppercase">Digital Creator / Composer</p>
@@ -147,9 +101,3 @@ expand_less
 
 </body>
 </html>
-なぜこれが「一番簡単」なのか？
-スマホで完結： GitHubのWebサイト上でファイルを直接新規作成（またはアップロード）するだけ。
-
-Firebase App Hosting： これまでの難しい設定が不要になり、GitHubを繋ぐだけでGoogleが勝手にビルドと公開を終わらせてくれます。
-
-さあ、GitHubにリポジトリを作り、このコードを投げ込んでください。URLが発行されるまであと一歩です！
