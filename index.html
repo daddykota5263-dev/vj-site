@@ -84,7 +84,8 @@
                     link.href = post.permalink;
                     link.target = '_blank';
                     link.className = 'aspect-square bg-cover bg-center border border-blue-500/30 hover:border-pink-500 transition-all';
-                    link.style.backgroundImage = `url(${post.mediaUrl})`;
+                    const imgUrl = post.mediaUrl || post.media_url;
+                    link.style.backgroundImage = `url(${imgUrl})`;
                     container.appendChild(link);
                 });
             } catch (err) {
