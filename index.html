@@ -18,13 +18,10 @@
         .neon-glow-pink { box-shadow: 0 0 20px var(--neon-pink); border: 1px solid var(--neon-pink); }
         .neon-text-blue { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
         .badge-neon {
-            background: rgba(0, 242, 255, 0.1);
-            border: 2px solid var(--neon-blue);
-            box-shadow: 0 0 15px var(--neon-blue);
-            animation: pulse 2s infinite;
+            background: rgba(0, 242, 255, 0.1); border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue); animation: pulse 2s infinite;
         }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
-        .glitch { position: relative; color: white; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
     </style>
 </head>
 <body class="p-4 md:p-8">
@@ -36,10 +33,10 @@
             </div>
         </div>
         <header class="mb-12">
-            <div class="neon-glow-pink rounded-lg overflow-hidden bg-black mb-6 text-0">
+            <div class="neon-glow-pink rounded-lg overflow-hidden bg-black mb-6">
                 <img src="IMG_7509.jpeg" alt="vj_chujo_k logo" class="w-full h-auto block">
             </div>
-            <h1 class="font-cyber text-4xl md:text-6xl italic font-bold glitch">vj_chujo_k</h1>
+            <h1 class="font-cyber text-4xl md:text-6xl italic font-bold">vj_chujo_k</h1>
             <p class="font-cyber text-sm tracking-[0.4em] text-pink-500 mt-2 uppercase">Digital Creator / Composer</p>
         </header>
         <section class="grid md:grid-cols-2 gap-8 bg-black/40 backdrop-blur-xl p-6 border-l-2 border-blue-500">
@@ -55,14 +52,46 @@
                 <h2 class="font-cyber text-pink-500 mb-4 tracking-tighter">>> ABOUT_EN</h2>
                 <p class="text-[11px] leading-relaxed opacity-70 italic font-light text-gray-400">
                     A DTM composer with a visual-oriented approach, creating music, video, and emotion as a unified whole.
-                    Their first self-produced music video debuted at #7 on the LINE MUSIC TOP 100 chart.<br><br>
-                    Following "SNOW NOISE" and "The Still Point," they are currently building the epic "Metropolis" series.
+                    Their first self-produced music video debuted at #7 on the LINE MUSIC TOP 100 chart.
                 </p>
             </div>
         </section>
+
+        <section class="mt-16">
+            <h3 class="font-cyber text-center text-blue-400 text-xs tracking-[0.5em] mb-8 uppercase">Visual Archives</h3>
+            <div id="instagram-feed" class="grid grid-cols-2 md:grid-cols-4 gap-2 text-white">
+                <!-- ここにInstagramの写真が自動で入ります -->
+                <div class="aspect-square bg-white/5 flex items-center justify-center font-cyber text-[8px] animate-pulse">CONNECTING...</div>
+                <div class="aspect-square bg-white/5 flex items-center justify-center font-cyber text-[8px] animate-pulse">CONNECTING...</div>
+            </div>
+        </section>
+
         <footer class="mt-20 pb-10 text-center opacity-40">
             <p class="font-cyber text-[9px] tracking-[0.3em]">&copy; 2024 vj_chujo_k / METROPOLIS PROJECT</p>
         </footer>
     </div>
+
+    <script>
+        async function fetchInstagram() {
+            const BEHOLD_URL = 'https://feeds.behold.so/r2WCNSumQly';
+            const container = document.getElementById('instagram-feed');
+            try {
+                const response = await fetch(BEHOLD_URL);
+                const data = await response.json();
+                container.innerHTML = '';
+                data.slice(0, 4).forEach(post => {
+                    const link = document.createElement('a');
+                    link.href = post.permalink;
+                    link.target = '_blank';
+                    link.className = 'aspect-square bg-cover bg-center border border-blue-500/30 hover:border-pink-500 transition-all';
+                    link.style.backgroundImage = `url(${post.media_url})`;
+                    container.appendChild(link);
+                });
+            } catch (err) {
+                container.innerHTML = '<div class="col-span-full text-center text-[10px] opacity-50">FAILED TO LOAD FEED</div>';
+            }
+        }
+        fetchInstagram();
+    </script>
 </body>
 </html>
