@@ -60,9 +60,8 @@
         <section class="mt-16">
             <h3 class="font-cyber text-center text-blue-400 text-xs tracking-[0.5em] mb-8 uppercase">Visual Archives</h3>
             <div id="instagram-feed" class="grid grid-cols-2 md:grid-cols-4 gap-2 text-white">
-                <!-- ここにInstagramの写真が自動で入ります -->
-                <div class="aspect-square bg-white/5 flex items-center justify-center font-cyber text-[8px] animate-pulse">CONNECTING...</div>
-                <div class="aspect-square bg-white/5 flex items-center justify-center font-cyber text-[8px] animate-pulse">CONNECTING...</div>
+                <div class="aspect-square bg-white/5 flex items-center justify-center font-cyber text-[8px] animate-pulse">LOADING...</div>
+                <div class="aspect-square bg-white/5 flex items-center justify-center font-cyber text-[8px] animate-pulse">LOADING...</div>
             </div>
         </section>
 
@@ -79,12 +78,15 @@
                 const response = await fetch(BEHOLD_URL);
                 const data = await response.json();
                 container.innerHTML = '';
-                data.slice(0, 4).forEach(post => {
+                // プレビュー画面で見えていた "posts" の中身を取り出すように修正
+                const posts = data.posts || data;
+                posts.slice(0, 4).forEach(post => {
                     const link = document.createElement('a');
                     link.href = post.permalink;
                     link.target = '_blank';
                     link.className = 'aspect-square bg-cover bg-center border border-blue-500/30 hover:border-pink-500 transition-all';
-                    link.style.backgroundImage = `url(${post.media_url})`;
+                    // Beholdのデータ形式 mediaUrl に合わせて修正
+                    link.style.backgroundImage = `url(${post.mediaUrl})`;
                     container.appendChild(link);
                 });
             } catch (err) {
