@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>vj_chujo_k Official Website | Digital Creator & Composer</title>
+    <meta name="description" content="デジタルクリエイター/コンポーザー vj_chujo_kの公式サイト。LINE MUSIC初登場7位を記録した作品や、近未来都市プロジェクト『Metropolis』を構築中。">
+    <meta name="keywords" content="vj_chujo_k, 作曲家, コンポーザー, DTM, Metropolis, SNOW NOISE, デジタルクリエイター">
 
+    <!-- Open Graph / SNS Share -->
+    <meta property="og:title" content="vj_chujo_k Official Website">
+    <meta property="og:description" content="音楽・映像・感情を一体化させるクリエイター、vj_chujo_kの公式ポートフォリオ。">
+    <meta property="og:image" content="https://daddykota5263-dev.github.io/vj-site/IMG_7509.jpeg">
+    <meta property="og:url" content="https://daddykota5263-dev.github.io/vj-site/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="vj_chujo_k Official Website">
+    <meta name="twitter:image" content="https://daddykota5263-dev.github.io/vj-site/IMG_7509.jpeg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --neon-pink: #ff007f; --neon-blue: #00f2ff; --bg-dark: #020203; }
+        body { background-color: var(--bg-dark); color: #e0e0e0; font-family: 'Noto Sans JP', sans-serif; overflow-x: hidden; }
+        .font-cyber { font-family: 'Orbitron', sans-serif; }
+        body::before {
+            content: " "; display: block; position: fixed; top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2; background-size: 100% 2px, 3px 100%; pointer-events: none;
+        }
+        .neon-glow-pink { box-shadow: 0 0 20px var(--neon-pink); border: 1px solid var(--neon-pink); }
+        .neon-text-blue { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+        .badge-neon {
+            background: rgba(0, 242, 255, 0.1); border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue); animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto relative z-10">
+        <div class="flex justify-end mb-4">
+            <div class="badge-neon rounded-full px-6 py-2 transform rotate-3">
+                <span class="font-cyber text-[10px] block text-white opacity-80 text-right">LINE MUSIC TOP 100</span>
+                <span class="font-cyber text-2xl font-bold neon-text-blue">#7 <span class="text-sm italic">RECORDS</span></span>
+            </div>
+        </div>
+
+        <header class="mb-12">
+            <div class="neon-glow-pink rounded-lg overflow-hidden bg-black mb-6 shadow-2xl">
+                <img src="IMG_7509.jpeg" alt="vj_chujo_k logo" class="w-full h-auto block">
+            </div>
+            <h1 class="font-cyber text-4xl md:text-6xl italic font-bold">vj_chujo_k</h1>
+            <p class="font-cyber text-sm tracking-[0.4em] text-pink-500 mt-2 uppercase">Digital Creator / Composer</p>
+        </header>
+
+        <section class="grid md:grid-cols-2 gap-8 bg-black/40 backdrop-blur-xl p-6 border-l-2 border-blue-500">
+            <div>
+                <h2 class="font-cyber text-blue-400 mb-4 tracking-tighter">>> PROFILE_JP</h2>
+                <p class="text-sm leading-relaxed text-gray-200">デジタルクリエイター/コンポーザー。音楽、映像、感情を一体として創り上げる。ミュージックビデオがLINE MUSIC TOP 100チャート初登場7位を記録。現在は近未来都市プロジェクト『Metropolis』を構築中。</p>
+            </div>
+            <div class="border-t border-white/10 pt-6 md:pt-0 md:border-t-0">
+                <h2 class="font-cyber text-pink-500 mb-4 tracking-tighter">>> ABOUT_EN</h2>
+                <p class="text-[11px] leading-relaxed opacity-70 italic font-light text-gray-400">A DTM composer with a visual-oriented approach. Currently building the "Metropolis" series.</p>
+            </div>
+        </section>
+
+        <section class="mt-16 text-center">
+            <h3 class="font-cyber text-blue-400 text-xs tracking-[0.5em] mb-8 uppercase">Visual Archives</h3>
+            <div id="instagram-feed" class="grid grid-cols-2 md:grid-cols-4 gap-2 text-white">
+                <div class="col-span-full font-cyber text-[10px] animate-pulse">CONNECTING...</div>
+            </div>
+        </section>
+
+        <footer class="mt-20 pb-10 text-center opacity-40">
+            <p class="font-cyber text-[8px] tracking-[0.3em] mb-2 uppercase">SEO Optimized | SYNC ACTIVE</p>
+            <p class="font-cyber text-[9px] tracking-[0.2em]">&copy; 2024 vj_chujo_k / METROPOLIS PROJECT</p>
+        </footer>
+    </div>
+
+    <script>
+        (function() {
+            // Your Behold URL is safe here
+            var api = 'https://feeds.behold.so/akm7AgDcozJMfluay1mp';
+            var box = document.getElementById('instagram-feed');
+            
+            fetch(api)
+                .then(function(r) { return r.json(); })
+                .then(function(d) {
+                    var posts = Array.isArray(d) ? d : (d.posts || []);
+                    box.innerHTML = '';
+                    posts.slice(0, 4).forEach(function(p) {
+                        var a = document.createElement('a');
+                        a.href = p.permalink;
+                        a.target = '_blank';
+                        a.className = 'aspect-square bg-cover bg-center border border-blue-500/30 hover:border-pink-500 transition-all shadow-lg';
+                        var src = p.mediaUrl || p.media_url;
+                        a.style.backgroundImage = 'url(' + src + ')';
+                        box.appendChild(a);
+                    });
+                })
+                .catch(function() {
+                    box.innerHTML = '<div class="col-span-full text-[10px] opacity-40 font-cyber">METROPOLIS SYNCING...</div>';
+                });
+        })();
+    </script>
+</body>
+</html>
