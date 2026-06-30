@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { 
-            background: url( IMG_0225.jpg ) no-repeat center center fixed;
+            background: url( "IMG_0225.jpg" ) no-repeat center center fixed;
             background-size: cover;
             color: #d1d1d1;
             font-family: 'Courier New', Courier, monospace;
@@ -24,7 +24,7 @@
     <main class="max-w-3xl mx-auto">
         
         <section class="mb-12">
-            <img src= IMG_0197.jpg alt="Record" class="w-full border border-cyan-500/50 shadow-[0_0_20px_rgba(0,255,255,0.2)]">
+            <img src= "IMG_0197.jpg" alt="Record" class="w-full border border-cyan-500/50 shadow-[0_0_20px_rgba(0,255,255,0.2)]">
         </section>
 
         <section class="hud-plate p-6 mb-12 text-[12px] leading-loose">
@@ -37,7 +37,7 @@
         <section class="text-center mb-12 hud-plate p-8">
             <p class="text-[12px] mb-6">vj_chujo_k is a multi-creator. A multi-discipline artist and producer who embodies "Physics × Music × Art." Free from genre constraints, they create versatile soundscapes through a deeply cinematic lens, bringing intricate sci-fi and cyberpunk worlds to life. While fully capable of crafting everything entirely solo—from songwriting to full video production—they are currently opening doors to new creative potential by actively collaborating with fellow creators, artists, and musicians.</p>
             
-            <img src= IMG_0200.jpg alt="Profile" class="w-32 h-32 mx-auto rounded-full border-2 border-cyan-500 mb-6">
+            <img src= "IMG_0200.jpg" alt="Profile" class="w-32 h-32 mx-auto rounded-full border-2 border-cyan-500 mb-6">
             
             <p class="text-[12px] mt-6">「物理×音楽×アート」を体現するマルチクリエイター／DTM作曲家。ジャンルの境界線を持たず、映像的アプローチから多彩な楽曲を生み出す。緻密なSF・サイバーパンク的世界観や独自のコンセプトを、音と映像の高度な融合によって立体的に表現。作詞作曲、歌唱から映像制作までを独力で完結できる確かなスキルを持ちながらも、現在は様々なクリエイターやアーティスト、音楽家とのコラボレーションを精力的に行い、クリエイティブの新たな可能性を切り開いている。</p>
         </section>
@@ -54,7 +54,7 @@
 
     <script>
         (function() {
-            var api = https://feeds.behold.so/akm7AgDcozJMfluay1mp ; // ここに既存のURLを入れてください
+            var api = 'https://feeds.behold.so/akm7AgDcozJMfluay1mp'; // ここに既存のURLを入れてください
             var box = document.getElementById('instagram-feed');
             fetch(api)
             .then(function(r) { return r.json() })
