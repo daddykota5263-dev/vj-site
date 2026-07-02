@@ -46,14 +46,27 @@
             <div id="instagram-feed" class="grid grid-cols-2 gap-2"></div>
         </section>
 
-        <footer class="mt-12 text-center overflow-hidden">
-    <div class="whitespace-nowrap animate-marquee">
-        <p class="inline-block text-[14px] tracking-[0.2em] mb-2 text-cyan-400 font-bold mx-10">
-            since 2024 METROPOLIS SYNCHRONIZE
-        </p>
-        <p class="inline-block text-[12px] uppercase text-cyan-400 mx-10">
-            &copy; 2024 vj_chujo_k / METROPOLIS PROJECT
-        </p>
+       <style>
+    /* 点滅（フリッカー）のアニメーション定義 */
+    @keyframes flicker {
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+            opacity: 1;
+        }
+        20%, 22%, 24%, 55% {
+            opacity: 0.1;
+        }
+    }
+
+    .flicker-text {
+        animation: flicker 4s infinite; /* 4秒周期でランダムに点滅 */
+        text-shadow: 0 0 5px rgba(34, 211, 238, 0.5); /* シアンの光彩 */
+    }
+</style>
+
+<footer class="mt-12 text-center">
+    <div class="flicker-text text-cyan-400 font-bold">
+        <p class="text-[14px] tracking-[0.2em] mb-2">since 2024 METROPOLIS SYNCHRONIZE</p>
+        <p class="text-[12px] uppercase">&copy; 2024 vj_chujo_k / METROPOLIS PROJECT</p>
     </div>
 </footer>
 
